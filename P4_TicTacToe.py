@@ -143,6 +143,14 @@ class TicTacToe :
         # creating quit buttton
         quitbtn= Button(self.top, padx=35, pady=20,text="Quit Game", bg='gold3', fg='black', command=quit)
         quitbtn.grid(row=7, column=0, columnspan=3, pady=(10,0), padx=(10,0))
+        
+        # creating bew game buttton
+        closebtn= Button(self.top, padx=35, pady=20,text="New Game", bg='gold3', fg='black', command=self.close)
+        closebtn.grid(row=8, column=0, columnspan=3, pady=(10,0), padx=(10,0))
+
+    # closes 2nd window
+    def close(self):
+        self.top.destroy()
 
 
     def __init__(self, main):
